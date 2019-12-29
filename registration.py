@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as m_box
-import os
-from csv import DictWriter
+# import os
+# from csv import DictWriter
 import mysql.connector
 mydb = mysql.connector.connect(
     host = "localhost",
@@ -53,6 +53,7 @@ for i in fieldValues:
         if i=='Full Name':
             box.focus()
     count +=1
+'''
 def action():
     with open("data.csv","a",newline="") as wf:
         csv_writer = DictWriter(wf,fieldnames = fieldValues)
@@ -75,6 +76,7 @@ def action():
         )
         for box in boxs:
             box.delete(0,tk.END)
+'''
 def action2():
     curr = mydb.cursor()
     # print(fieldValues.get('Full Name').get())
