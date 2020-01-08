@@ -2,7 +2,7 @@ import tkinter as tk
 # from tkinter import ttk
 from tkinter import messagebox as m_box
 win = tk.Tk()
-win.title("Tic Tac Too")
+win.title("Tic Tac Toe")
 cantainer = tk.LabelFrame(win)
 win.geometry("370x280")
 win.resizable(0,0)
