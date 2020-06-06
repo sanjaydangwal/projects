@@ -43,28 +43,26 @@ def numPress(num):
 def optPress(opt):
     if display_var.get()[-1] not in ('-','+','/','%','x'):
         display_var.set(display_var.get()+opt)
-
-#for result button
-def result():
-    expration = display_var.get()
-    
-    try:
-        display_var.set(eval(expration.replace("x","*")))
-    except ZeroDivisionError :
-        display_var.set("undefined")
-    if len(display_var.get()) > 14:
-        display_var.set(display_var.get()[0:14])
-
-#for clear button
-def clear():
-    display_var.set("0")        
-
 #for backspace button
 def back():
     var = display_var.get()[0:len(display_var.get())-1]
     display_var.set(var)
     if display_var.get() == "":
         display_var.set("0")
+
+#for clear button
+def clear():
+    display_var.set("0")        
+
+#for result button
+def result():
+    expration = display_var.get()
+    try:
+        display_var.set(eval(expration.replace("x","*")))
+    except ZeroDivisionError :
+        display_var.set("undefined")
+    if len(display_var.get()) > 14:
+        display_var.set(display_var.get()[0:14])
 
 #for squar function
 def sqr():
